@@ -1,0 +1,29 @@
+{% block content %}
+
+<form method="POST" action="/create">
+
+    {{ form.name.label }}
+    {% if form.name.errors %}
+        {% for error in form.name.errors %}
+            {{ error }}
+        {% endfor %}
+    {% endif %}
+    {{ form.name }}
+
+    {{ form.email.label }}
+        {% for error in form.name.errors %}
+            {{ error }}
+        {% endfor %}
+    {{ form.email }}
+
+    {{ form.phone.label }}
+        {% for error in form.name.errors %}
+            {{ error }}
+        {% endfor %}
+    {{ form.phone }}
+
+    {{ form.submit(class="btn-primary") }}
+
+</form>
+
+{% endblock %}
